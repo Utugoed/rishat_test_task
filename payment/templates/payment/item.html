@@ -13,9 +13,9 @@
       var stripe = Stripe('{{ checkout_public_key }}');
       var buyButton = document.getElementById('buy_now_btn');
       buyButton.addEventListener('click', function() {
-        fetch('/buy/{{ item.pk }}', {method: 'GET'})
+        fetch('/orders/make_from_product/{{ item.pk }}', {method: 'GET'})
         .then((response) => response.json())
-        .then((json) => stripe.redirectToCheckout({sessionId: json.session_id}));
+        .then((json) => window.location.replace('/orders/'+json.order_id));
       })
     </script>
 

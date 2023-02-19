@@ -14,7 +14,7 @@ class AdminItem(admin.ModelAdmin):
         )
 
         item_price = stripe.Price.create(
-            unit_amount=obj.price * 100,
+            unit_amount=int(obj.price * 100),
             currency="rub",
             product=item_product['id'],
         )
