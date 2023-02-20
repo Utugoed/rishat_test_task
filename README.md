@@ -15,10 +15,10 @@ Then you will be able to log in Django-admin:
 With username rishat and password V3rySt0ngP4ss to create new Item and new Order with Items
 
 This app contains the following endpoints:
-/item/<int:pk> - Where pk is item primary key. Returns item details
-/orders/<int:pk> - Where pk is order primary key. Returns order details
-/orders/make_from_product/<int:pk> - Where pk is item primary key. Endpoint for internal use.
+1. /item/<int:pk> - Where pk is item primary key. Returns item details
+2. /orders/<int:pk> - Where pk is order primary key. Returns order details
+3. /orders/make_from_product/<int:pk> - Where pk is item primary key. Endpoint for internal use.
                                      Forms an order from one specified product
-/buy/success - This page will be returned after successfull order payment
-/buy/cancel - This page will be returned after order payment cancelation
-/buy/<int:pk> - Where pk is order primary key. Returns Stripe session_id for order payment
+4. /buy/success - This page will be returned after successfull order payment
+5. /buy/cancel - This page will be returned after order payment cancelation
+6. /buy/<int:pk> - Where pk is order primary key. Returns Stripe session_id for order payment
