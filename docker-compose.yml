@@ -5,9 +5,6 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=password
-      # - DJANGO_SUPERUSER_EMAIL=test@test.com
-      # - DJANGO_SUPERUSER_USERNAME=rishat
-      # - DJANGO_SUPERUSER_PASSWORD=rishat
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "rishat", "-U", "rishat" ]
       timeout: 5s
